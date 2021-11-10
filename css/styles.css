@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+:root{
+  --primary-color: #8F0000;
+  --secondary-color: #B39800;
+  --primary-bg-color: #59757D;
+  --secondary-bg-color: #0A1216;
+  --tertiary-bg-color: #04241B;
+}
+
+body{
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+h3{
+  color: #fff;
+  font-size: 8vw;
+  text-align: center;
+  margin: 0 50px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-bg-color);
+  mix-blend-mode: multiply;
+  scroll-snap-align: center;
+}
+
+.sec:nth-child(1){
+  background: var(--tertiary-bg-color) url(../pics/kaart_georgie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(2){
+  background: var(--primary-bg-color) url(../pics/georgie_demonstratie1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(3){
+  background: var(--secondary-bg-color) url(../pics/ussr_vlag.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(4){
+  background: var(--tertiary-bg-color) url(../pics/kaart_georgie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(5){
+  background: var(--primary-bg-color) url(../pics/kaart_georgie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(6){
+  background: var(--secondary-bg-color) url(../pics/kaart_georgie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sec:nth-child(7){
+  background: var(--tertiary-bg-color) url(../pics/kaart_georgie.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+/*----------Grids-----------*/
+.containergrid1 {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.4fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". titel titel titel ."
+    ". gridarea1 . . ."
+    ". gridarea1 . gridarea2 ."
+    ". . . gridarea2 ."
+    ". . . . .";
+}
+
+.gridarea1 {
+  grid-area: gridarea1;
+}
+
+.gridarea2 {
+  grid-area: gridarea2;
+}
+
+.section_titel {
+  grid-area: titel;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+  text-decoration: underline;
+}
+
+.containergrid2 {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.4fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". titel titel titel ."
+    ". . . gridarea4 ."
+    ". gridarea3 . gridarea4 ."
+    ". gridarea3 . . ."
+    ". . . . .";
+}
+
+.gridarea3 {
+  grid-area: gridarea3;
+}
+.gridarea4 {
+  grid-area: gridarea4;
+}
+
+.containergrid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". titel titel titel ."
+    ". gridarea5 gridarea5 gridarea5 ."
+    ". gridarea5 gridarea5 gridarea5 ."
+    ". gridarea5 gridarea5 gridarea5 ."
+    ". . . . .";
+}
+
+.gridarea5 {
+  grid-area: gridarea5;
+}
+
+.gridarea {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  color: #fff;
+}
+
+.gridarea > h1{
+  margin-bottom: 10px;
+}
+
+.gridarea > p{
+  margin-bottom: 10px;
+}
+
+/*-------Scroll progress bar-------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+@media screen and (min-width: 600px) {
+
+  body{
+    font-size: 14px;
+  }
+
+  /*--------------Grids-------*/
+  .containergrid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". titel titel titel ."
+      ". gridarea1 . . ."
+      ". gridarea1 . gridarea2 ."
+      ". . . gridarea2 ."
+      ". . . . .";
+  }
+
+  .containergrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". titel titel titel ."
+      ". . . gridarea4 ."
+      ". gridarea3 . gridarea4 ."
+      ". gridarea3 . . ."
+      ". . . . .";
+  }
+
+  .containergrid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". titel titel titel ."
+      ". gridarea5 gridarea5 gridarea5 ."
+      ". gridarea5 gridarea5 gridarea5 ."
+      ". . . . ."
+      ". . . . .";
+  }
+
+}
+
+@media screen and (min-width: 1000px){
+  body{
+    font-size: 18px;
+  }
+}
